@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhia & Nour</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1> Happy Moments - A Surprise </h1>
+        <div class="sub"> Dhia & Nour</div>
+    </header>
+    <!-- countdown for special days -->
+     <section class="top-grid">
+        <div class="card">
+            <div class="small"> Your Birthday</div>
+            <div id="birthday-count" class="countdown">-</div>
+            <div class="small">Next occurance: <span id="birthday-next"></span></div>
+        </div>
+
+        <div class="card">
+            <div class="small"> Anniversary</div>
+            <div id="anniv-count" class="countdown">-</div>
+            <div class="small">Next occurance: <span id="anniv-next"></span></div>
+        </div>
+
+        <div class="card">
+            <div class="small"> My Birthday</div>
+            <div id="mybirthday-count" class="countdown">-</div>
+            <div class="small">Next occurance: <span id="mybirthday-next"></span></div>
+        </div>
+
+        <div class="card-together">
+            <div class="small">Days since we  started</div>
+            <div id="together-days" class="big"></div>
+            <div id="together-seconds" class="small">- seconds</div>
+            <div class="small">Start date: Dec 14, 2022</div>
+        </div>
+    </section>
+
+    <!--birthday card surprise-->
+    <div id="birthday-card" style="display:none;">
+        <div class="card-content">
+            <h1>Happy Birthday!</h1>
+            <p>
+                Wishing you a day filled with love, joy and all  your favorite things. You deserve the best on your special day and always. Here is another year of amazing memories together my love!
+                I love you so much and i want you to know that i will be always by your side 
+            </p>
+        </div>
+
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
+    </div>
+
+    <div id="rotating-gallery" style="position: relative; width: 500px; height:500px; margin: 40px auto;">
+        <div id="carousel"></div>
+    </div>
+
+    <main class="gallery" id="gallery"></main>
+    <footer> Dhia & Nour </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
