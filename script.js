@@ -1,5 +1,5 @@
 ///countdown cards scripts 
-const GF_BDAY={month: 10, day:1};
+const GF_BDAY={month: 10, day:22};
 const ANNIV = {month:12, day:14};
 const MY_BDAY = {month: 4, day:27};
 const START_DATE= new Date('2022-12-14');
@@ -195,4 +195,26 @@ Object.keys(PHOTOS).sort((a,b) => b.localeCompare(a)).forEach(key => {
 });
 
 // Close expanded view 
+if (closeBtn){
 closeBtn.addEventListener('click', () => expandedView.style.display = 'none');
+}
+//gate function 
+(function(){
+    const gate = document.getElementById('gate');
+    const mainContent = document.getElementById('main-content');
+    const nextBtn = document.getElementById('gate-next');
+    const msg = document.getElementById('gate-msg');
+
+    nextBtn.addEventListener('click', () => {
+        const m = Number(document.getElementById('gate-month').value);
+        const d = Number(document.getElementById('gate-day').value);
+
+        if (m === ANNIV.month && d === ANNIV.day) {
+            msg.textContent = '';
+            gate.style.display = 'none';
+            mainContent.style.display = 'block';
+        } else {
+            msg.textContent = 'Wrong date..! 🙃 try again';
+        }
+    });
+})();
